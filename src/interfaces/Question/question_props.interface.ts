@@ -9,7 +9,7 @@ interface QuestionProps {
   onAnswerSelection?: (
     questionIndex?: number,
     answerIndex?: number,
-    resultID?: number
+    resultID?: number[]
   ) => void;
 }
 

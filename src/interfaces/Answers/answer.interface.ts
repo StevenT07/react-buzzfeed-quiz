@@ -29,7 +29,7 @@ type AnswerType = ImageType & {
   onAnswerSelection?: (
     questionIndex?: number,
     answerIndex?: number,
-    resultID?: number
+    resultID?: number[]
   ) => void;
   /**
    * Reveals a custom response message below the associated question if this specific answer is selected.
@@ -43,7 +43,7 @@ type AnswerType = ImageType & {
   /**
    * The numerical ID of the answer's associated result object found in ReactBuzzFeedQuiz's results prop.
    */
-  resultID: number;
+  resultID: number[];
 };
 
 export default AnswerType;

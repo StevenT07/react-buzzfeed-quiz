@@ -70,7 +70,7 @@ type BuzzFeedQuizProps = BylineProps & {
   onAnswerSelection?: (
     questionIndex?: number,
     answerIndex?: number,
-    resultID?: number
+    resultID?: number[]
   ) => void;
   /**
    * Function called when the "Retake Quiz" button is clicked in the result container.

@@ -21,12 +21,12 @@ const Answers: FC<AnswersProps> = ({
   const handleAnswerSelection = (
     questionIndex: number,
     answerIndex: number,
-    resultID: number,
+    resultID: number[],
     showResponse: boolean,
     specificHandleAnswerSelection?: (
       questionIndex: number,
       answerIndex: number,
-      resultID: number
+      resultID: number[]
     ) => void
   ) => {
     const handleGeneralAnswerSelection = () => {

@@ -15,7 +15,7 @@ interface AnswersProps {
   onAnswerSelection?: (
     questionIndex?: number,
     answerIndex?: number,
-    resultID?: number
+    resultID?: number[]
   ) => void;
   generalBackgroundColor?: string;
   generalFontColor?: string;

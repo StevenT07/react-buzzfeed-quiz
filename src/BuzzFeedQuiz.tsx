@@ -15,7 +15,7 @@ interface ContextProps {
 }
 
 export const QuizContext = createContext<ContextProps>({
-  selectedAnswers: [{ questionIndex: 0, resultID: 0, answerIndex: 0 }],
+  selectedAnswers: [{ questionIndex: 0, resultID: [0], answerIndex: 0 }],
   changeSelectedAnswers: () => [],
   scrollFunction: () => {},
 });
@@ -122,10 +122,12 @@ const BuzzFeedQuiz: FC<BuzzFeedQuizProps> = (props) => {
       const answerFreq: { [key: string]: number } = {};
 
       for (let i = 0; i < allAnswers.length; i++) {
-        if (answerFreq[allAnswers[i]]) {
-          answerFreq[allAnswers[i]]++;
-        } else {
-          answerFreq[allAnswers[i]] = 1;
+        for (let j = 0; j < allAnswers[i].length; j++) {
+          if (answerFreq[allAnswers[i][j]]) {
+            answerFreq[allAnswers[i][j]]++;
+          } else {
+            answerFreq[allAnswers[i][j]] = 1;
+          }
         }
       }
 

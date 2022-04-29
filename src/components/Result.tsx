@@ -78,6 +78,10 @@ const Result: FC<ResultProps> = (props) => {
       <Element className="rbq_result_outer_container" name="Result">
         <div className="rbq_result_header">
           <h2>{title}</h2>
+          {finalResult.length > 1 &&
+            <p className="test">Tie!</p>
+          }
+        }
         </div>
         <div className="rbq_result_inner_container">
           <div className="rbq_result_inner_description_container">

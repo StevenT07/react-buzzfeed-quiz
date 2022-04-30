@@ -133,15 +133,17 @@ const BuzzFeedQuiz: FC<BuzzFeedQuizProps> = (props) => {
 
       const greatestValue = Math.max(...Object.values(answerFreq));
 
-      const mostFrequentResultID = Object.keys(answerFreq).find(
-        (key) => answerFreq[key] === greatestValue
+      const mostFrequentResultID = Object.keys(answerFreq).filter((key) => 
+        answerFreq[key] === greatestValue
       );
+
+      console.log(mostFrequentResultID);
 
       if (!resultsAvailable) {
         changeResultsAvailable(true);
         changeFinalResult(
           results.filter(
-            (result) => Number(result.resultID) === Number(mostFrequentResultID)
+            (result) => mostFrequentResultID.includes(result.resultID.toString())
           )
         );
       }

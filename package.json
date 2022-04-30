@@ -6,7 +6,6 @@
   "types": "./lib/index.d.ts",
   "private": false,
   "dependencies": {
-    "react-buzzfeed-quiz": "file:react-buzzfeed-quiz-2.0.6.tgz",
     "react-icons": "^4.3.1",
     "react-resize-detector": "^7.0.0",
     "react-scroll": "^1.8.5"

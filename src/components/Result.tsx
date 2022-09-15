@@ -79,36 +79,34 @@ const Result: FC<ResultProps> = (props) => {
         <div className="rbq_result_header">
           <h2>{title}</h2>
         </div>
-        
-        {finalResult.map((i) => {
-            return (
+       
               <div className="rbq_result_inner_container">
                 <div className="rbq_result_inner_description_container">
                   <h3 className="rbq_result_inner_description_header">
-                    {i.title}
+                    {finalResult[0].title}
                   </h3>
                   <p className="rbq_result_inner_description">
-                    {i.description}
+                    {finalResult[0].description}
                   </p>
                 </div>
-                {i.resultImageSrc && (
+                {finalResult[0].resultImageSrc && (
                   <div className="rbq_result_inner_image_container">
                     <img
                       className="rbq_result_inner_image"
                       alt="Buzzfeed Quiz Result Image"
-                      src={i.resultImageSrc}
+                      src={finalResult[0].resultImageSrc}
                     />
-                    {i.imageAttribution ? (
+                    {finalResult[0].imageAttribution ? (
                       <span className="rbq_result_attribution_text">
-                        {i.imageAttribution}
+                        {finalResult[0].imageAttribution}
                       </span>
                     ) : null}
                   </div>
                 )}
               </div>
-            )
-          })
-        }
+            
+          
+        
 
         <div className="rbq_result_footer">
           <button className="rbq_retake_quiz_button" onClick={handleRetakeQuiz}>
